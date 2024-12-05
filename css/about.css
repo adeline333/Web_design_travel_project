@@ -1,0 +1,223 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+    color: white;
+
+    padding: 60px 20px; 
+}
+
+.container {
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 0 20px; 
+    flex: 1; 
+    align-items: stretch;
+}
+
+.content {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 30px; 
+    align-items: stretch;
+}
+
+.text {
+    flex: 1; 
+    text-align: left; 
+    color: #333; 
+    justify-content: center;
+}
+
+.text h3 {
+    color: rgb(48, 185, 135); 
+    margin: 20px 0 10px; 
+}
+
+.text p {
+    line-height: 1.6; 
+    margin: 0 0 20px; 
+    font-style: oblique;
+    text-decoration: double;
+
+}
+
+.text ul {
+    list-style-type: lower-greek; 
+    padding: 0; 
+}
+
+.text ul li {
+    margin: 10px 0; 
+    font-style: italic;
+}
+
+.image {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex: 1;
+}
+
+.image img {
+    max-width: 150%; 
+    max-height: 100%;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+    object-fit: cover;
+}
+
+footer {
+    background-color: rgba(80, 197, 158, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+
+
+
+
+
+
+/* Header Styles */
+header {
+    background-color: rgb(80, 197, 158); /* Semi-transparent background */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.links li {
+    margin: 0 15px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.links a i {
+    margin-right: 8px;
+}
+
+.links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column; /* Stack items vertically on tablets */
+    }
+
+    .text, .image {
+        text-align: center; /* Center text and image */
+        margin-bottom: 20px; /* Space between text and image */
+    }
+
+    .image img {
+        max-width: 80%; /* Ensure the image scales appropriately */
+    }
+
+    .text ul {
+        padding: 0 20px; /* Add padding for better readability */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 40px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .text h3 {
+        font-size: 24px; /* Adjust heading size for better readability */
+    }
+
+    .text p {
+        font-size: 16px; /* Adjust paragraph size for readability */
+    }
+
+    .text ul li {
+        font-size: 14px; /* Adjust list item size for smaller screens */
+    }
+
+    .image img {
+        max-width: 100%; /* Make sure the image fits within the container */
+    }
+
+    .links {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center navigation links */
+    }
+
+    .links li {
+        margin: 10px 0; /* Adjust spacing between navigation links */
+    }
+
+    .links a {
+        font-size: 16px; /* Adjust font size for navigation links */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 5px; /* Further reduce padding for very small screens */
+    }
+
+    .text h3 {
+        font-size: 20px; /* Further adjust heading size */
+    }
+
+    .text p {
+        font-size: 14px; /* Further adjust paragraph size */
+    }
+
+    .text ul li {
+        font-size: 12px; /* Further adjust list item size */
+    }
+
+    .image img {
+        max-width: 90%; /* Adjust image size for very small screens */
+    }
+
+    .links a {
+        font-size: 14px; /* Adjust font size for very small screens */
+    }
+}

@@ -1,0 +1,134 @@
+#tips {
+    margin-top: 80px; /* Offset for fixed header to ensure content doesn't hide behind it */
+    padding: 20px; /* Padding around the tips section */
+    text-align: center; /* Center-align text within the tips section */
+    background: url('../Gallery/blue baech.jpg') no-repeat center center/cover; /* Background image for the tips section with centering and cover properties */
+}
+
+#tips .container {
+    max-width: 1600px; /* Maximum width of the container to keep content centered and maintain readability */
+    margin: auto; /* Center the container horizontally */
+}
+
+#tips .grid {
+    display: grid; /* Use grid layout for the tips section */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create a responsive grid layout with columns that fit the available space */
+    gap: 20px; /* Space between grid items */
+}
+
+#tips .card {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the cards */
+    padding: 20px; /* Padding inside each card */
+    border-radius: 10px; /* Rounded corners for the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
+    text-align: center; /* Center-align text within the cards */
+    color: black; /* Text color inside the cards */
+}
+
+#tips .card img {
+    max-width: 100%; /* Ensure images inside cards are responsive and do not exceed the card's width */
+    border-radius: 10px; /* Rounded corners for the images */
+}
+
+#tips .card h3 {
+    margin: 15px 0; /* Margin above and below the headings inside cards */
+    color: rgb(80, 197, 158); /* Heading color */
+}
+
+#tips .card p {
+    color: black; /* Paragraph text color inside cards */
+}
+
+#tips .card a {
+    background-color: rgb(137, 201, 178); /* Background color for the links/buttons inside cards */
+    color: white; /* Text color for the links/buttons */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 20px; /* Padding inside the buttons */
+    border-radius: 5px; /* Rounded corners for the buttons */
+    display: inline-block; /* Ensure the button behaves like an inline element with block properties */
+    transition: background-color 0.3s; /* Smooth transition effect for the button background color on hover */
+}
+
+#tips .card a:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background color on hover */
+}
+
+#tips .card i {
+    font-size: 50px; /* Icon size inside the cards */
+    color: rgb(80, 197, 158); /* Icon color */
+    margin-bottom: 15px; /* Space below the icons */
+}
+
+footer {
+    background-color: rgba(80, 197, 158, 0.9); /* Semi-transparent background color for the footer */
+    color: white; /* Text color inside the footer */
+    text-align: center; /* Center-align text within the footer */
+    padding: 10px 0; /* Padding inside the footer */
+    position: relative; /* Footer positioning */
+    width: 100%; /* Footer spans the full width of the page */
+    bottom: 0; /* Footer sticks to the bottom */
+}
+
+/* Responsive adjustments for header */
+header {
+    background-color: rgb(80, 197, 158); /* Semi-transparent background color for the header */
+    color: white; /* Text color inside the header */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Align the header to the top of the page */
+    left: 0; /* Align the header to the left */
+    width: 100%; /* Header spans the full width of the page */
+    z-index: 1000; /* Ensure the header stays above other content */
+}
+
+nav {
+    display: flex; /* Flexbox layout for the navigation */
+    justify-content: center; /* Center-align the navigation items */
+    align-items: center; /* Vertically center-align the navigation items */
+    height: 60px; /* Height of the navigation bar */
+}
+
+.links {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding from the list */
+    margin: 0; /* Remove margin from the list */
+    display: flex; /* Display the list items in a row */
+}
+
+.links li {
+    margin: 0 15px; /* Margin between list items */
+}
+
+.links a {
+    color: white; /* Text color for the links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size for the links */
+    display: flex; /* Flexbox layout for the links */
+    align-items: center; /* Vertically center-align the link content */
+    padding: 10px; /* Padding inside the links */
+    transition: background-color 0.3s; /* Smooth transition effect for background color on hover */
+}
+
+.links a i {
+    margin-right: 8px; /* Space between the icon and text inside the links */
+}
+
+.links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background color on hover */
+    border-radius: 5px; /* Rounded corners for the hover effect */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    #tips .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid layout for smaller screens */
+    }
+    
+    .links a {
+        font-size: 16px; /* Smaller font size for links on smaller screens */
+        padding: 8px; /* Reduced padding for better fit on smaller screens */
+    }
+    
+    #tips .card i {
+        font-size: 40px; /* Smaller icon size for better fit on smaller screens */
+    }
+}
